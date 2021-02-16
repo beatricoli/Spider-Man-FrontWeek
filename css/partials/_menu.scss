@@ -5,7 +5,7 @@ header{
 
 .navbar{
     max-width: 1440px;
-    border: 1px solid red;;
+    // border: 1px solid red;;
     margin: 0 auto;
 
     padding: 0px 16px;
@@ -19,21 +19,29 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+   
+
 }
 
 .nav-list{
     list-style: none;
     display: flex;
-    border: 2px solid red;
+    // border: 2px solid red;
 
     li{
         margin-left: 24px;
     }
 
+    @include responsive(){
+        display: none;
+    }
+
 }
 
 .logo{
-    border: 2px solid forestgreen;
+    // border: 2px solid forestgreen;
+    max-width: 88px;
 }
 
 .nav-link{
@@ -80,6 +88,18 @@ header{
     }
 }
 
+.bx{
+
+    @include responsive(){
+        display: block;
+    }
+    display: none;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 8px;
+}
+
 .nav-social{
     display: flex;
 
@@ -99,5 +119,8 @@ header{
                 transform: translate3d(0, -3px, 0);
             }
         }
+    }
+    @include responsive(){
+        display: none;
     }
 }
